@@ -1,0 +1,67 @@
+{
+  "tabs": {
+    "home": {
+      "title": "Home"
+    },
+    "settings": {
+      "title": "Settings"
+    }
+  },
+  "home": {
+    "header": {
+      "title": "Expo Router Starter",
+      "subtitle": "Router, i18n, SWR, and Zustand wired for release governance."
+    },
+    "meta": {
+      "title": "Build Metadata",
+      "env": "Env: {{value}}",
+      "channel": "Channel: {{value}}",
+      "version": "Version: {{value}}",
+      "build": "Build: {{value}}",
+      "sha": "Git SHA: {{value}}"
+    },
+    "sample": {
+      "title": "Sample Feature",
+      "apiReady": "API ready: {{value}}",
+      "apiMissing": "Set EXPO_PUBLIC_API_BASE_URL to enable API calls.",
+      "loading": "Loading server data...",
+      "error": "Server request failed.",
+      "empty": "No server data yet.",
+      "counter": "Local counter: {{value}}",
+      "increment": "Increment",
+      "decrement": "Decrement"
+    }
+  },
+  "settings": {
+    "header": {
+      "title": "Preferences",
+      "subtitle": "Locale and UI defaults."
+    },
+    "language": {
+      "title": "Language",
+      "current": "Current: {{value}}",
+      "en": "English",
+      "zh-CN": "Chinese"
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "Sign In"
+    }
+  },
+  "notFound": {
+    "header": {
+      "title": "Route Missing",
+      "subtitle": "This screen does not exist."
+    },
+    "action": {
+      "home": "Go to home"
+    }
+  },
+  "common": {
+    "error": {
+      "title": "Something went wrong.",
+      "retry": "Try again"
+    }
+  }
+}

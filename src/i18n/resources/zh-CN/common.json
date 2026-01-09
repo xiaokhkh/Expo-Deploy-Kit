@@ -1,0 +1,67 @@
+{
+  "tabs": {
+    "home": {
+      "title": "\u9996\u9875"
+    },
+    "settings": {
+      "title": "\u8bbe\u7f6e"
+    }
+  },
+  "home": {
+    "header": {
+      "title": "Expo Router \u6a21\u677f",
+      "subtitle": "Router\u3001i18n\u3001SWR \u4e0e Zustand \u5df2\u63a5\u5165\u53d1\u7248\u6cbb\u7406\u3002"
+    },
+    "meta": {
+      "title": "\u6784\u5efa\u4fe1\u606f",
+      "env": "\u73af\u5883: {{value}}",
+      "channel": "\u6e20\u9053: {{value}}",
+      "version": "\u7248\u672c: {{value}}",
+      "build": "\u6784\u5efa\u53f7: {{value}}",
+      "sha": "\u63d0\u4ea4: {{value}}"
+    },
+    "sample": {
+      "title": "\u793a\u4f8b\u529f\u80fd",
+      "apiReady": "API \u5c31\u7eea: {{value}}",
+      "apiMissing": "\u8bbe\u7f6e EXPO_PUBLIC_API_BASE_URL \u4ee5\u542f\u7528 API \u8bf7\u6c42\u3002",
+      "loading": "\u52a0\u8f7d\u670d\u52a1\u7aef\u6570\u636e...",
+      "error": "\u670d\u52a1\u7aef\u8bf7\u6c42\u5931\u8d25\u3002",
+      "empty": "\u6682\u65e0\u670d\u52a1\u7aef\u6570\u636e\u3002",
+      "counter": "\u672c\u5730\u8ba1\u6570: {{value}}",
+      "increment": "\u589e\u52a0",
+      "decrement": "\u51cf\u5c11"
+    }
+  },
+  "settings": {
+    "header": {
+      "title": "\u504f\u597d\u8bbe\u7f6e",
+      "subtitle": "\u8bed\u8a00\u4e0e\u754c\u9762\u9ed8\u8ba4\u503c\u3002"
+    },
+    "language": {
+      "title": "\u8bed\u8a00",
+      "current": "\u5f53\u524d: {{value}}",
+      "en": "\u82f1\u8bed",
+      "zh-CN": "\u4e2d\u6587"
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "\u767b\u5f55"
+    }
+  },
+  "notFound": {
+    "header": {
+      "title": "\u9875\u9762\u4e0d\u5b58\u5728",
+      "subtitle": "\u5f53\u524d\u9875\u9762\u4e0d\u5b58\u5728\u3002"
+    },
+    "action": {
+      "home": "\u8fd4\u56de\u9996\u9875"
+    }
+  },
+  "common": {
+    "error": {
+      "title": "\u53d1\u751f\u9519\u8bef\u3002",
+      "retry": "\u91cd\u8bd5"
+    }
+  }
+}

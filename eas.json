@@ -1,0 +1,32 @@
+{
+  "cli": {
+    "version": ">= 8.0.0"
+  },
+  "build": {
+    "dev": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "TARGET_ENV": "dev",
+        "CHANNEL": "development"
+      }
+    },
+    "prod": {
+      "distribution": "store",
+      "env": {
+        "TARGET_ENV": "prod",
+        "CHANNEL": "production"
+      }
+    }
+  },
+  "update": {
+    "dev": {
+      "branch": "dev",
+      "channel": "development"
+    },
+    "prod": {
+      "branch": "main",
+      "channel": "production"
+    }
+  }
+}

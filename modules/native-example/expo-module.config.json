@@ -1,0 +1,10 @@
+{
+  "name": "native-example",
+  "platforms": ["ios", "android"],
+  "ios": {
+    "modules": ["NativeExampleModule"]
+  },
+  "android": {
+    "modules": ["com.starter.nativeexample.NativeExampleModule"]
+  }
+}

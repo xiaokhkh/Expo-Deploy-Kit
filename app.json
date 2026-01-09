@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "Expo Router i18n Starter",
+    "slug": "expo-router-i18n-starter",
+    "scheme": "expo-router-i18n-starter",
+    "version": "1.0.0",
+    "ios": {
+      "bundleIdentifier": "com.example.exporouterstarter"
+    },
+    "android": {
+      "package": "com.example.exporouterstarter"
+    }
+  }
+}
