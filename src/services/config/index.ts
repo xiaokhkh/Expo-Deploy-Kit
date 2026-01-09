@@ -28,6 +28,7 @@ export function getAppConfig(): AppConfig {
   const versionCode = typeof extra.versionCode === "number" ? extra.versionCode : 0;
   const gitSha = typeof extra.gitSha === "string" ? extra.gitSha : "unknown";
   const apiBaseUrl = typeof extra.apiBaseUrl === "string" ? extra.apiBaseUrl : "";
+  const androidApkUrl = typeof extra.androidApkUrl === "string" ? extra.androidApkUrl : "";
 
   cachedConfig = {
     targetEnv,
@@ -36,7 +37,8 @@ export function getAppConfig(): AppConfig {
     buildNumber,
     versionCode,
     gitSha,
-    apiBaseUrl
+    apiBaseUrl,
+    androidApkUrl
   };
 
   return cachedConfig;

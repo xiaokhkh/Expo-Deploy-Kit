@@ -8,4 +8,5 @@ export type AppConfig = {
   versionCode: number;
   gitSha: string;
   apiBaseUrl: string;
+  androidApkUrl: string;
 };

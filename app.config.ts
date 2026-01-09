@@ -7,6 +7,7 @@ const targetEnv = process.env.TARGET_ENV ?? "dev";
 const channel = process.env.CHANNEL ?? "production";
 const gitSha = process.env.GIT_SHA ?? "unknown";
 const apiBaseUrl = process.env.EXPO_PUBLIC_API_BASE_URL ?? "";
+const androidApkUrl = process.env.EXPO_PUBLIC_ANDROID_APK_URL ?? "";
 
 const allowedTargets = new Set(["dev", "prod"]);
 if (!allowedTargets.has(targetEnv)) {
@@ -56,7 +57,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     adaptiveIcon: {
       foregroundImage: "./assets/adaptive-icon.png",
       backgroundColor: "#F7F4EF"
-    }
+    },
+    permissions: ["REQUEST_INSTALL_PACKAGES"]
   },
   plugins: ["expo-router", "expo-dev-client"],
   experiments: {
@@ -69,6 +71,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     appVersion: version,
     buildNumber: iosBuildNumber,
     versionCode: androidVersionCode,
-    apiBaseUrl
+    apiBaseUrl,
+    androidApkUrl
   }
 });

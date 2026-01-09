@@ -32,6 +32,16 @@ Example:
 - Use `npx create-expo-module <name> --local` to add new modules.
 - Dev client is required to test native modules (`npm run dev:client`).
 
+## Android in-app update (APK)
+- Configure `EXPO_PUBLIC_ANDROID_APK_URL` to enable APK download/install.
+- Requires Android permission `REQUEST_INSTALL_PACKAGES` (already declared).
+- Not related to OTA: APK install is native-only and must be distributed separately.
+
+## Play Store in-app update
+- Requires the app to be distributed via Google Play.
+- Exposes immediate/flexible update flows via the in-app update module.
+- Not available on debug/sideload builds.
+
 ## Directory layout (summary)
 - app/: expo-router pages and layouts
 - src/i18n: i18n setup and locale resources

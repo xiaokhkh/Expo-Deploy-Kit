@@ -46,6 +46,11 @@
 - Any native capability changes, permission changes, or schema-breaking changes require PACKAGE.
 - HOTPATCH must specify a version range and generate a rollback point.
 
+## Android In-App Update
+- APK download/install is a native feature and is not OTA.
+- Provide APK URLs via config and distribute with proper signing.
+- Play Store in-app update requires Google Play distribution and is separate from OTA.
+
 ## CI/CD (Jenkins)
 - Jenkinsfile only orchestrates; business logic lives in scripts/.
 - CI commands must be runnable locally.

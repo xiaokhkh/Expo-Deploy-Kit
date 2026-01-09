@@ -42,6 +42,39 @@
       "current": "Current: {{value}}",
       "en": "English",
       "zh-CN": "Chinese"
+    },
+    "update": {
+      "title": "Android in-app update",
+      "subtitle": "Download and install an APK update from a trusted source.",
+      "unsupported": "In-app update is only available on Android.",
+      "missingUrl": "Set EXPO_PUBLIC_ANDROID_APK_URL to enable APK updates.",
+      "permissionRequired": "Allow this app to install unknown apps.",
+      "permissionButton": "Open permission settings",
+      "startButton": "Download update",
+      "starting": "Downloading update...",
+      "started": "Download started. Follow the installer prompt.",
+      "errors": {
+        "permission_check_failed": "Unable to check install permission.",
+        "missing_apk_url": "APK URL is missing.",
+        "start_failed": "Update failed to start."
+      }
+    },
+    "playUpdate": {
+      "title": "Play Store update",
+      "subtitle": "Check for updates via Google Play.",
+      "unsupported": "Play Store updates are only available on Android Play builds.",
+      "checking": "Checking for updates...",
+      "unavailable": "No update available.",
+      "available": "Update available (versionCode: {{value}}).",
+      "immediate": "Immediate update",
+      "flexible": "Flexible update",
+      "checkButton": "Check again",
+      "errors": {
+        "check_failed": "Unable to check Play Store updates.",
+        "start_failed": "Failed to start Play Store update.",
+        "not_available": "No Play Store update available.",
+        "not_allowed": "Selected update type is not allowed."
+      }
     }
   },
   "auth": {

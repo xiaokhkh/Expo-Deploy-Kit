@@ -24,6 +24,7 @@
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.23.1",
     "@starter/native-example": "*",
+    "@starter/in-app-update": "*",
     "expo": "~51.0.0",
     "expo-constants": "~16.0.2",
     "expo-dev-client": "~3.3.5",

@@ -2,12 +2,17 @@ import { Pressable, Text, View } from "react-native";
 import { useTranslation } from "react-i18next";
 
 import { Screen } from "../../src/components/ui/Screen";
+import { InAppUpdateCard } from "../../src/features/inAppUpdate/components/InAppUpdateCard";
+import { PlayUpdateCard } from "../../src/features/inAppUpdate/components/PlayUpdateCard";
+import { useInAppUpdate, usePlayUpdate } from "../../src/features/inAppUpdate/hooks";
 import { setLanguage, SUPPORTED_LANGUAGES } from "../../src/i18n";
 import { useTheme } from "../../src/style/theme";
 
 export default function SettingsScreen() {
   const { t, i18n } = useTranslation();
   const theme = useTheme();
+  const update = useInAppUpdate();
+  const playUpdate = usePlayUpdate();
 
   return (
     <Screen>
@@ -57,6 +62,9 @@ export default function SettingsScreen() {
             ))}
           </View>
         </View>
+
+        <InAppUpdateCard update={update} />
+        <PlayUpdateCard update={playUpdate} />
       </View>
     </Screen>
   );

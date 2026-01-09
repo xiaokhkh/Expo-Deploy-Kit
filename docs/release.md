@@ -14,6 +14,14 @@
 - OTA/HOTPATCH are for JS/assets only.
 - Any native capability changes must use PACKAGE.
 
+## Android In-App Update (APK)
+- APK download/install is native-only and separate from OTA/HOTPATCH.
+- Host the APK and set `EXPO_PUBLIC_ANDROID_APK_URL` for Android builds.
+
+## Play Store In-App Update
+- Requires Play Store distribution.
+- Works only on Play builds and uses Google Play update flows (immediate/flexible).
+
 ## Required Inputs
 - TARGET_ENV: dev | prod
 - CHANNEL: production | pay | ...
