@@ -1,3 +1,5 @@
+import "dotenv/config";
+
 import type { ConfigContext, ExpoConfig } from "expo/config";
 
 const appJson = require("./app.json");
@@ -41,9 +43,8 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     backgroundColor: "#F7F4EF"
   },
   updates: updatesUrl ? { url: updatesUrl } : undefined,
-  runtimeVersion: {
-    policy: "appVersion"
-  },
+  runtimeVersion: version,
+  newArchEnabled: true,
   ios: {
     ...(config.ios ?? {}),
     bundleIdentifier: iosBundleId,

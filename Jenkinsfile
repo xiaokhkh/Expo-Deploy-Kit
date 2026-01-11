@@ -26,12 +26,13 @@ pipeline {
     }
     stage("Install") {
       steps {
-        sh "npm ci"
+        sh "corepack enable"
+        sh "pnpm install --frozen-lockfile"
       }
     }
     stage("Release") {
       steps {
-        sh "npm run release"
+        sh "pnpm run release"
       }
     }
   }

@@ -40,20 +40,20 @@
 
 ## Commands
 - Version bump:
-  - npm run release:version -- --bump patch
-  - npm run release:version -- --set 1.2.3
+  - pnpm run release:version -- --bump patch
+  - pnpm run release:version -- --set 1.2.3
 
 - Package:
   - TARGET_ENV=prod CHANNEL=production PLATFORM=ios RELEASE_TYPE=PACKAGE \
-    ANDROID_ARTIFACT=AAB npm run release:package -- --notes "release notes"
+    ANDROID_ARTIFACT=AAB pnpm run release:package -- --notes "release notes"
 
 - OTA:
   - TARGET_ENV=prod CHANNEL=production PLATFORM=ios RELEASE_TYPE=OTA \
-    RELEASE_NOTES="release notes" npm run release:ota
+    RELEASE_NOTES="release notes" pnpm run release:ota
 
 - Hotpatch:
   - TARGET_ENV=prod CHANNEL=production PLATFORM=ios RELEASE_TYPE=HOTPATCH \
-    VERSION_RANGE="1.2.x" RELEASE_NOTES="hotfix notes" npm run release:hotpatch
+    VERSION_RANGE="1.2.x" RELEASE_NOTES="hotfix notes" pnpm run release:hotpatch
 
 ## Rollback
 - Use the previous release record ID as ROLLBACK_TO.

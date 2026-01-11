@@ -15,22 +15,25 @@ Expo Router + i18next + SWR/Zustand + OTA/Hotpatch + Jenkins CI/CD.
    - expo.slug
    - expo.ios.bundleIdentifier
    - expo.android.package
-2) Set build metadata in `build.json` if needed.
-3) Install deps and run:
-   - npm install
-   - npm run dev:client
+2) Copy `.env.example` to `.env` and fill in values for local dev.
+3) Set build metadata in `build.json` if needed.
+4) Install deps and run:
+   - pnpm install
+   - pnpm run dev:client
 
 ## Environment and channel
 - TARGET_ENV: dev | prod
 - CHANNEL: production | pay | ...
+## Local env
+- `.env` is loaded by `app.config.ts` for local development.
 
 Example:
-- TARGET_ENV=dev CHANNEL=production npm run dev
+- TARGET_ENV=dev CHANNEL=production pnpm run dev
 
 ## Native modules (expo-module)
 - Local module scaffold lives at `modules/native-example`.
 - Use `npx create-expo-module <name> --local` to add new modules.
-- Dev client is required to test native modules (`npm run dev:client`).
+- Dev client is required to test native modules (`pnpm run dev:client`).
 
 ## Android in-app update (APK)
 - Configure `EXPO_PUBLIC_ANDROID_APK_URL` to enable APK download/install.
@@ -52,16 +55,16 @@ Example:
 
 ## Release commands
 - Version bump:
-  - npm run release:version -- --bump patch
+  - pnpm run release:version -- --bump patch
 - Package:
   - TARGET_ENV=prod CHANNEL=production PLATFORM=both RELEASE_TYPE=PACKAGE \
-    ANDROID_ARTIFACT=AAB npm run release:package -- --notes "release notes"
+    ANDROID_ARTIFACT=AAB pnpm run release:package -- --notes "release notes"
 - OTA:
   - TARGET_ENV=prod CHANNEL=production PLATFORM=ios RELEASE_TYPE=OTA \
-    RELEASE_NOTES="release notes" npm run release:ota
+    RELEASE_NOTES="release notes" pnpm run release:ota
 - Hotpatch:
   - TARGET_ENV=prod CHANNEL=production PLATFORM=ios RELEASE_TYPE=HOTPATCH \
-    VERSION_RANGE="1.2.x" RELEASE_NOTES="hotfix notes" npm run release:hotpatch
+    VERSION_RANGE="1.2.x" RELEASE_NOTES="hotfix notes" pnpm run release:hotpatch
 
 ## Governance docs
 - docs/rules.md

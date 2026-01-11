@@ -2,9 +2,17 @@
   "name": "@starter/native-example",
   "version": "0.1.0",
   "private": true,
+  "description": "Example Expo native module",
+  "homepage": "https://github.com/xiaokhkh/expo-module-starter",
+  "license": "MIT",
+  "author": "starter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiaokhkh/expo-module-starter.git"
+  },
   "main": "src/index.ts",
   "types": "src/index.ts",
   "dependencies": {
-    "expo-modules-core": "^1.12.0"
+    "expo-modules-core": "^3.0.29"
   }
 }
