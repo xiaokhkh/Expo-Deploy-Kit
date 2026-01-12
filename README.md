@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**[English](#expo-deploy-kit)** | **[中文](#expo-deploy-kit-1)**
+**[English](#english)** | **[中文](#chinese)**
 
 Production-ready React Native starter with enterprise deployment capabilities.
 
@@ -12,7 +12,7 @@ Production-ready React Native starter with enterprise deployment capabilities.
 
 ---
 
-## Expo Deploy Kit
+## English {#english}
 
 A production-grade React Native starter template designed for enterprise mobile applications. Built with Expo, it provides a complete foundation for building scalable, internationalized apps with seamless over-the-air update capabilities and automated CI/CD pipelines.
 
@@ -233,7 +233,7 @@ function App() {
 
 ---
 
-## Expo Deploy Kit
+## Chinese {#chinese}
 
 生产级 React Native 启动模板，专为企业级移动应用设计。基于 Expo 构建，提供完整的基础架构，支持可扩展应用开发、国际化支持、无缝 OTA 更新和自动化 CI/CD 流程。
 
