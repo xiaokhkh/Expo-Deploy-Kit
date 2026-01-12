@@ -19,8 +19,7 @@
     "release": "tsx scripts/release.ts",
     "release:version": "tsx scripts/version.ts",
     "release:package": "tsx scripts/package.ts",
-    "release:ota": "tsx scripts/ota.ts",
-    "release:hotpatch": "tsx scripts/hotpatch.ts"
+    "release:update": "tsx scripts/hotpatch.ts"
   },
   "dependencies": {
     "@expo/metro-runtime": "~6.1.2",

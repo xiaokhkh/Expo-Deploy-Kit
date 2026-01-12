@@ -34,17 +34,18 @@
 ## Environment, Channel, Release Type
 - TARGET_ENV is only dev or prod.
 - CHANNEL defaults to production and can be extended (e.g., pay).
-- RELEASE_TYPE is only PACKAGE, OTA, HOTPATCH.
+- RELEASE_TYPE is only PACKAGE, HOTPATCH.
 - Do not introduce a fourth type unless you also update:
   - docs/rules.md
   - docs/release.md
   - scripts/*
   - Jenkinsfile
 
-## OTA / HOTPATCH Red Lines
-- OTA and HOTPATCH are JS/assets only.
+## HOTPATCH Red Lines
+- HOTPATCH is for JS/assets only.
+- Without VERSION_RANGE: updates all versions on the channel.
+- With VERSION_RANGE: targets specific version range (requires rollback point).
 - Any native capability changes, permission changes, or schema-breaking changes require PACKAGE.
-- HOTPATCH must specify a version range and generate a rollback point.
 
 ## Android In-App Update
 - APK download/install is a native feature and is not OTA.

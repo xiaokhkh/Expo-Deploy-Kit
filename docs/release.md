@@ -7,15 +7,18 @@
 
 ## Release Types
 - PACKAGE: app store build (apk/aab/ipa).
-- OTA: normal JS/asset update.
-- HOTPATCH: urgent JS/asset update with a strict version range.
+- HOTPATCH: JS/asset update with optional version range.
 
-## OTA / HOTPATCH Boundaries
+## HOTPATCH Boundaries
+- HOTPATCH is for JS/assets only.
+- Without VERSION_RANGE: updates all versions on the channel.
+- With VERSION_RANGE: targets specific version range (requires rollback point).
+- Any native capability changes must use PACKAGE.
 - OTA/HOTPATCH are for JS/assets only.
 - Any native capability changes must use PACKAGE.
 
 ## Android In-App Update (APK)
-- APK download/install is native-only and separate from OTA/HOTPATCH.
+- APK download/install is native-only and separate from UPDATE/HOTPATCH.
 - Host the APK and set `EXPO_PUBLIC_ANDROID_APK_URL` for Android builds.
 
 ## Play Store In-App Update
@@ -26,7 +29,7 @@
 - TARGET_ENV: dev | prod
 - CHANNEL: production | pay | ...
 - PLATFORM: android | ios | both
-- RELEASE_TYPE: PACKAGE | OTA | HOTPATCH
+- RELEASE_TYPE: PACKAGE | HOTPATCH
 - ANDROID_ARTIFACT: APK | AAB (PACKAGE only)
 
 ## Hotpatch Requirements
@@ -47,14 +50,14 @@
   - TARGET_ENV=prod CHANNEL=production PLATFORM=ios RELEASE_TYPE=PACKAGE \
     ANDROID_ARTIFACT=AAB pnpm run release:package -- --notes "release notes"
 
-- OTA:
-  - TARGET_ENV=prod CHANNEL=production PLATFORM=ios RELEASE_TYPE=OTA \
-    RELEASE_NOTES="release notes" pnpm run release:ota
+- Hotpatch (normal update):
+  - TARGET_ENV=prod CHANNEL=production PLATFORM=both \
+    RELEASE_NOTES="release notes" pnpm run release:update
 
-- Hotpatch:
-  - TARGET_ENV=prod CHANNEL=production PLATFORM=ios RELEASE_TYPE=HOTPATCH \
-    VERSION_RANGE="1.2.x" RELEASE_NOTES="hotfix notes" pnpm run release:hotpatch
+- Hotpatch (version-constrained):
+  - TARGET_ENV=prod CHANNEL=production PLATFORM=both RELEASE_TYPE=HOTPATCH \
+    VERSION_RANGE="1.2.x" RELEASE_NOTES="hotfix notes" pnpm run release:update
 
 ## Rollback
 - Use the previous release record ID as ROLLBACK_TO.
-- For HOTPATCH, a rollback record is mandatory.
+- Required for version-constrained HOTPATCH.

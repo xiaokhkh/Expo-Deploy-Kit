@@ -5,7 +5,7 @@ pipeline {
     choice(name: "TARGET_ENV", choices: ["dev", "prod"], description: "Target environment")
     string(name: "CHANNEL", defaultValue: "production", description: "Release channel")
     choice(name: "PLATFORM", choices: ["android", "ios", "both"], description: "Release platform")
-    choice(name: "RELEASE_TYPE", choices: ["PACKAGE", "OTA", "HOTPATCH"], description: "Release type")
+    choice(name: "RELEASE_TYPE", choices: ["PACKAGE", "HOTPATCH"], description: "Release type")
     choice(name: "ANDROID_ARTIFACT", choices: ["APK", "AAB"], description: "Android artifact type")
     string(name: "ROLLBACK_TO", defaultValue: "", description: "Optional rollback record ID")
   }

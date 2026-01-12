@@ -5,7 +5,7 @@ import { getProjectRoot, readJson, writeJson } from "./meta";
 
 export type ReleaseRecord = {
   id: string;
-  type: "PACKAGE" | "OTA" | "HOTPATCH";
+  type: "PACKAGE" | "HOTPATCH";
   targetEnv: string;
   channel: string;
   platform: string;

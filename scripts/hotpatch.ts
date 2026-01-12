@@ -33,18 +33,18 @@ const platform = validatePlatform(
   requireValue("PLATFORM", args.platform ?? process.env.PLATFORM)
 );
 const easPlatform = mapPlatformForEas(platform);
-const range = requireValue("VERSION_RANGE", args.range ?? process.env.VERSION_RANGE);
+const range = args.range ?? process.env.VERSION_RANGE;
 const notes = readNotes(args);
 
 if (!notes) {
-  throw new Error("Release notes are required for HOTPATCH.");
+  throw new Error("Release notes are required.");
 }
 
 const previousRecord = findLatestRecord({ targetEnv, channel, platform });
 const rollbackTo = args["rollback-to"] ?? process.env.ROLLBACK_TO ?? previousRecord?.id;
 
-if (!rollbackTo) {
-  throw new Error("HOTPATCH requires a rollback point. Provide --rollback-to or publish a prior release.");
+if (range && !rollbackTo) {
+  throw new Error("HOTPATCH with VERSION_RANGE requires a rollback point.");
 }
 
 const meta = getReleaseMeta();
@@ -62,8 +62,7 @@ appendRecord({
   versionCode: meta.versionCode,
   gitSha: meta.gitSha,
   notes,
-  range,
-  rollbackTo,
+  ...(range && { range, rollbackTo }),
   createdAt
 });
 
