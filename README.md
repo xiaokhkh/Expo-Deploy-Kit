@@ -232,3 +232,54 @@ function App() {
 - [Release Workflow](./docs/release.md) - Release process
 - [Git Branching Strategy](./docs/branching.md) - Branch workflow
 - [AI Agent Guidelines](./docs/ai-rules.md) - AI-assisted development
+
+---
+
+## Project Status
+
+### ✅ Completed (Tested)
+
+| Module | Feature | Status |
+|--------|---------|--------|
+| **Core Framework** | Expo Router routing | ✅ |
+| | i18n (EN/ZH) | ✅ |
+| | TypeScript strict mode | ✅ |
+| **State Management** | SWR (server) | ✅ |
+| | Zustand (client) | ✅ |
+| **UI Components** | Base UI library | ✅ |
+| | App layout & navigation | ✅ |
+| | Theme & dark mode | ✅ |
+| **Business Features** | Auth flow | ✅ |
+| | Home tabs | ✅ |
+| | Settings page | ✅ |
+| | Error boundary | ✅ |
+| **Services** | HTTP client | ✅ |
+| | Storage (AsyncStorage) | ✅ |
+| | Environment config | ✅ |
+| **Native Modules** | In-App Update (Android) | ✅ |
+| | Native module example | ✅ |
+| **Documentation** | README EN/ZH | ✅ |
+| | Project rules | ✅ |
+| | Release workflow | ✅ |
+| | Branching strategy | ✅ |
+| | AI agent guidelines | ✅ |
+
+### ⏳ Pending Test
+
+| Module | Feature | Notes |
+|--------|---------|-------|
+| **CI/CD** | Jenkins Pipeline | Scripts ready, not tested in Jenkins |
+| | Automated build | Pipeline not verified |
+| **OTA Updates** | EAS Update | Configured, not tested in prod |
+| | Rollback | Not tested |
+
+### Test Priority
+
+- [ ] Jenkins CI/CD full pipeline test
+- [ ] EAS Update OTA flow test
+- [ ] Rollback mechanism test
+
+### Known Risks
+
+1. **CI/CD**: Jenkins Pipeline not verified in real environment
+2. **OTA**: EAS Update not tested in production
