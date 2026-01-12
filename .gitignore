@@ -22,9 +22,7 @@ build/
 coverage/
 
 # Local env
-.env
 .env.*
-!.env
 !.env.example
 
 # Release records (keep local copies if desired)
