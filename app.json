@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "Expo OTA Starter",
-    "slug": "expo-ota-starter",
-    "scheme": "expo-ota-starter",
+    "name": "Expo Deploy Kit",
+    "slug": "expo-deploy-kit",
+    "scheme": "expo-deploy-kit",
     "version": "1.0.0",
     "ios": {
-      "bundleIdentifier": "com.example.expootastarter"
+      "bundleIdentifier": "com.example.expo-deploy-kit"
     },
     "android": {
-      "package": "com.example.expootastarter"
+      "package": "com.example.expo-deploy-kit"
     }
   }
 }
