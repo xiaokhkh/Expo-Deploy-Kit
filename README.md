@@ -1,3 +1,5 @@
+> ⚠️ **Warning: Repository is under development and not fully tested. Use at your own risk.**
+
 # Expo Deploy Kit
 
 <div align="center">
