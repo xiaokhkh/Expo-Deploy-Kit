@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "Expo Router i18n Starter",
-    "slug": "expo-router-i18n-starter",
-    "scheme": "expo-router-i18n-starter",
+    "name": "Expo OTA Starter",
+    "slug": "expo-ota-starter",
+    "scheme": "expo-ota-starter",
     "version": "1.0.0",
     "ios": {
-      "bundleIdentifier": "com.example.exporouterstarter"
+      "bundleIdentifier": "com.example.expootastarter"
     },
     "android": {
-      "package": "com.example.exporouterstarter"
+      "package": "com.example.expootastarter"
     }
   }
 }
