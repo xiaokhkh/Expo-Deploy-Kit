@@ -1,3 +1,5 @@
+> ⚠️ **仓库仍在开发中，未完全测试完成，使用存在风险。**
+
 # Expo Deploy Kit
 
 <div align="center">
